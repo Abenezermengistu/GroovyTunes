@@ -21,7 +21,7 @@ This repository contains the source code for GroovyTunes, a simple music streami
 ### Getting Started:
 
 1. Clone the Repository: 
-      git clone https://github.com/your-username/GroovyTunes.git
+      git clone https://github.com/Abenezermengistu/GroovyTunes.git
    
 2. Open in Your Web Browser:
    * Open the index.html file in your web browser. 
@@ -61,9 +61,5 @@ This project is licensed under the MIT License. See the LICENSE file for details
 ### Contributions:
 
 Contributions are welcome! Feel free to submit issues, pull requests, or suggestions to improve the app.
-
-### Contact:
-
-If you have any questions, feel free to contact me at [your email address].
 
 Enjoy GroovyTunes! 🎶
