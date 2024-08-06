@@ -3,8 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>VibeCheck Music Player</title>
+  <title>Groovy Music Player</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" 
+  crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+
 </head>
 <body>
   <nav class="navbar">
@@ -13,7 +18,6 @@
       <input type="text" id="search-input" placeholder="Search for music...">
       <div id="search-suggestions"></div>
     </div>
-    <button class="login-button">Login</button>
   </nav>
 
   <div class="playlist-container" id="playlist-container">
@@ -30,16 +34,19 @@
 
   <div class="player" style="display: flex; align-items: center; padding: 10px; background-color: #333; color: #fff;">
     <div class="player-info" style="display: flex; align-items: center; flex: 1;">
-      <img id="player-images" src="" alt="Album Cover" style="height: 80px; width: 80px; margin-right: 10px;"> 
-      <div style="display: flex; flex-direction: column;">
+      <img id="player-images" src="" alt="Album Cover" onerror="this.src='images/Default.jpg'" style="height: 80px; width: 80px; margin-right: 10px; border-radius: 5px;">  
+      <div id="player-details" style="display: flex; flex-direction: column; display: none;">
         <p id="player-title" style="margin-bottom: 2px;">Title</p>
         <p id="player-artist" style="font-size: 0.8em;">Artist</p>
       </div>
     
-    <button id="backward-button" style="background-color: #ff6b6b; color: white; border: none; padding: 10px 15px; border-radius: 5px; cursor: pointer; margin: 0 5px;">-10s</button>
-    <audio id="audio-player" controls style="flex: 1; margin: 0 10px;"></audio>
-    <button id="forward-button" style="background-color: #ff6b6b; color: white; border: none; padding: 10px 15px; border-radius: 5px; cursor: pointer; margin: 0 5px;">+10s</button>
+      <button id="backward-button" style="background-color: #ff6b6b; color: white; border: none; padding: 10px 15px; border-radius: 5px; cursor: pointer; margin: 0 5px; border-radius: 25%;"><i class="fas fa-backward"></i></button>
+      <audio id="audio-player" controls style="flex: 1; margin: 0 10px;"></audio>
+      <button id="forward-button" style="background-color: #ff6b6b; color: white; border: none; padding: 10px 15px; border-radius: 5px; cursor: pointer; margin: 0 5px; border-radius: 25%;"><i class="fas fa-forward"></i></button>
+      
+ 
   </div>
+
   
 
   <script src="scripts.js"></script>

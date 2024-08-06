@@ -120,21 +120,26 @@ function loadPlaylist(query) {
   
 // Function to play a selected track
 function playTrack(track) {
-    const audioPlayer = document.getElementById('audio-player');
-    const playerTitle = document.getElementById('player-title');
-    const playerArtist = document.getElementById('player-artist');
-    const playerImages = document.getElementById('player-images'); // Assuming you have an image element with this ID
+  const audioPlayer = document.getElementById('audio-player');
+  const playerTitle = document.getElementById('player-title');
+  const playerArtist = document.getElementById('player-artist');
+  const playerImages = document.getElementById('player-images'); 
+  const playerDetails = document.getElementById('player-details'); // Get the player details div
 
-    audioPlayer.src = track.preview_url; // Example: Use preview_url or another property for playable URL
-    audioPlayer.play();
+  audioPlayer.src = track.preview_url; 
+  audioPlayer.play();
 
-    playerTitle.textContent = track.name;
-    playerArtist.textContent = track.artists[0].name;
-    playerImages.src = track.album.images[0].url;  // Correct way to set image source
-    playerImages.alt = track.album.name; // Set alt text for accessibility
+  playerTitle.textContent = track.name;
+  playerArtist.textContent = track.artists[0].name;
+  playerImages.src = track.album.images[0].url; 
+  playerImages.alt = track.album.name;
 
-    displaySongDetails(track);
+  // Show the player details 
+  playerDetails.style.display = 'flex'; 
+
+  displaySongDetails(track);
 }
+
 
   
 
